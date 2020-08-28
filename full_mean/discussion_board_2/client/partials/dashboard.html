@@ -1,0 +1,33 @@
+<div>
+	<h2>Welcome {{topics.name}}</h3>
+	<form>
+		<table>
+			<tr>
+				<th>Category</th>
+				<th>Topic</th>
+				<th>User Name</th>
+				<th>Posts</th>
+			</tr>
+			<tr ng-repeat = 'topic in topics'>
+				<td>{{topic.category}}</td>
+				<td>{{topic.title}}</td>
+				<td></td>
+				<td>n</td>
+			</tr>
+		</table>
+	</form>
+	<h2>Add a new Topic</h2>
+	<form ng-submit='create(newTopic)'>
+		Topic: <input type='text' ng-model='newTopic.title'>
+		Description: <input type='text' ng-model='newTopic.description'>
+		Category: <select ng-model='newTopic.category'>
+			<option>UX</option>
+			<option>Web Dev</option>
+			<option>Python</option>
+			<option>MEAN</option>
+			<option>IOS</option>
+			<option>Ruby on Rails</option>
+		</select>
+		<input type="submit">
+	</form>
+</div>

@@ -1,0 +1,27 @@
+<div>
+	<div>
+		<h1><span class="heading_center">Registered Bodies</span></h1>
+	</div>
+	<div id="building_container">
+		<table class="table table-striped table-bordered">
+			<tr>
+				<th>Building Name</th>
+				<th>Location</th>
+				<th>Check Room(s)</th>
+			</tr>
+			<tr ng-repeat='building in buildings'>
+				<td>{{building.name}}</td>
+				<td>{{building.location}}</td>
+				<td><a href="#/building_rooms"><button class="btn btn-primary">show</button></a></td>
+			</tr>
+		</table>
+		<h1>Add Building</h1>
+		<div>
+		<form ng-submit='create(newBuilding)'>
+			Body Name:<input type='text' ng-model='newBuilding.name' class='form-control'>
+			Location:<input type='text' ng-model='newBuilding.location' class='form-control'>
+			<input type='submit'class="btn btn-primary">
+		</form>
+		</div>
+	<div>
+</div>

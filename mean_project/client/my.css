@@ -1,0 +1,54 @@
+*{
+	/*border: 1px dotted white;*/
+}
+#container {
+	background: -webkit-radial-gradient(#ffffff,#d1b9c1, #c09faa, #78516b);
+	min-height: 1062px;
+	background-attachment: fixed;
+}
+
+#img1	 {
+    opacity: .10;
+    height: 24px;
+    margin-left: 265px;
+    width: 695px;
+    border: 2px grey solid;
+    border-radius: 240px;
+}
+#img2 {
+    opacity: 0.1;
+    height: 348px;
+    margin-top: 9px;
+    margin-left: 34px;
+    width: 541px;
+    border: 2px grey solid;
+    border-radius: 240px;
+}	
+#login_container{
+   		margin-left: 520px;
+    	width: 345px;
+    	margin-top: 144px;
+    	margin-bottom: 112px;
+	}
+
+	#building_container{
+   		margin-left: 488px;
+    	width: 302px;
+	}
+	#room_container{
+   		margin-left: 488px;
+    	width: 302px;
+	}
+	span.heading_center{
+		margin-left: 453px;
+	}
+	span.title_center{
+		margin-left: 550px;
+	}
+		span.font_style{
+			color: white; 
+			font-size: 30px;
+		}
+		.margin_space{
+			margin: 5px;
+		}

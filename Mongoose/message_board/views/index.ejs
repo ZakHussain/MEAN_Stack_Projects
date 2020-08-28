@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Message Board</title>
+</head>
+<body>
+	<% if(typeof(errors) != 'undefined'){ %>
+		<% for(var x in errors) { %>
+			<h3><%= errors[x].message %></h3>
+		<% } %>
+	<% } %>	
+	<form action="/post", method="post">
+		<div>
+			<h3>Name:</h3>
+			<input type="text" name="name"></input>
+		</div>
+		<div>
+			<h3>Message:</h3>
+			<textarea type="text" name="message"></textarea>
+		</div>
+		<input type="submit" value="Post message"></input>
+	</form>
+	<div>
+		<%if(typeof(errors) == 'undefined'){ %>
+			<% for (index in Messages){ %>
+				<div>
+					<p>Name: <%= Messages[index].name %></p>
+					<p>Message: <%= Messages[index].message %></p>
+				</div>
+
+				<% for( var i = 0 ; i<Messages[index]._comments.length; i++){ %>
+				<div>
+					<p>Name:<%=	Messages[index]._comments[i].name %></p>
+					<p>Comment:<%=	Messages[index]._comments[i].comment %></p>
+				</div>
+				<% } %>
+
+				<div>
+					<form action="/message/<%= Messages[index]._id %>", method="post">
+						<div>
+							<p>Name:</p>
+							<input type="text" name="name"></input>
+						</div>
+						<div>
+							<p>Comment:</p>
+							<textarea type="text" name="comment"></textarea>
+						</div>
+						<input type="submit" value="Leave a comment"></input>
+					</form>
+				</div>
+			<% } %>
+		<% } %>
+	</div>
+</body>
+</html>

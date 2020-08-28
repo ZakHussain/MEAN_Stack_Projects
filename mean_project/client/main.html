@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Serial_Communication_Controller</title>
+	<link rel="stylesheet" type="text/css" href="my.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script>
+		$(function() {
+			$("#on").click(function(){
+				alert("you clicked me! but I don't work!")
+				$.ajax('/on');
+			})
+			$("#off").click(function(){
+				$.ajax('/off');
+				alert("you clicked me also! but I don't work either!")	
+			})
+		})
+	</script>
+</head>
+<body id='container'>
+	<img id="img2" src="image.gif">
+	<button id="on" class="btn btn-primary">ON</button>
+	<button id="off" class="btn btn-primary">OFF</button>
+</body>
+</html>

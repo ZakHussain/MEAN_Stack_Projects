@@ -1,0 +1,118 @@
+<!-- HTML is placed into Document Object Model (DOM)
+styled with css
+Javascript communicates with the DOM. 
+Javascript interpreters use this patter: 
+	1. scan code for the keywords: var and function 
+	2. var is moced and the name associated with var is copied to the top of the code(hoisting). The interpreter leaves behind any assignments, and thuse hoisted variable start off as being undefined. 
+	
+	1. if it comes across a function, the entire block is hoisted, but placed below other hoisted variables
+
+	This is the initial reoredering
+
+	if a { } set is found inside of a function, the process above is repqeated
+		- the var's and inner functions are sent to the top of the { - this is referred to as the funciton scope
+
+<!-- Variables
+thigs held within an array:
+-strings
+-numbers
+-objects
+-functions
+-other variables
+-undefined
+-null
+-booleans
+-arrays
+
+to determine the type of data a variable contains use the built-in function typeof: 
+	Example:
+		var myunknown = [1,2,3]; 
+		console.log(typeof(myunknown)); 
+
+ --> 
+
+
+
+<!-- Functions -->
+functions in javascript are known as "FIRST_CLASS'." this means that they can go anywhere
+*functions can be stored as standalone functions.  ( if stored as a javascript objects then they are known as methods)
+*functions can be passed as arguments to other functions( this is callback)
+*functions can be returned from functions (closure)
+
+<!-- conditionals -->
+
+things that evaluate to false: 
+false, 
+0
+null 
+undefined
+""(empty string) 
+Nan (not a numberical number) 
+
+
+
+Ternary Operater:
+(condition) ? console.log(true) : console.log(false)
+
+this is saying that if condition is true, log true, else log false..
+
+**also this page contains common logical operators for conditionals
+
+
+<!-- While Loops -->
+these are all the things we do while the condition is true. once the condition is false, we stop
+
+
+you can also look at "do-while" loop
+
+
+
+	x=[3,5,'Dojo', 'rocks', 'Michael', 'Sensei']
+	for(var i = 0; i<arr.length; i++){
+	console.log(arr[i]);
+	}
+	x.push(100);
+
+	x.push(add the array)
+
+_________________________________________________
+
+
+
+for(index in new_ninja) {
+	console.log(new_ninja[index]);
+}
+
+_________________________________________________
+JS part II
+
+var person = {
+	name : 'Zak'
+	distance_traveled : 0, 
+	say_name : function() {
+		console.log(person.name);
+
+	}, 
+	wald : function() {
+		person.distance_traveled+=10;
+	}
+};
+
+person.say_name();
+_________________________________________________
+function personConstructor() {
+	var person = {};
+	
+	return{};
+
+}
+
+<!-- FUnction Scoping -->
+variables that you declare with var inside a function are accessible only inside the function they are declared in. 
+
+<!-- each function has access to all the variables in its parent functions. -->
+<!-- No function has access to the variable in its child functions. -->
+<!-- think of the whole .js file as an outer function when thinking about scope -->
+
+
+

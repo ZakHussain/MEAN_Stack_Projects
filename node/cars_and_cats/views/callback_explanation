@@ -1,0 +1,22 @@
+http.createServer = function(cb) {
+	console.log(cb);
+	request = {
+		url : '/',
+		headers : [contentType: 'text/html', session: '1234231235']
+	};
+	//attach url info, headers, etc
+	response = {};
+
+	response.sendHeader(a, b) = function() {
+		response.headerers = [a, b];
+	}
+	//attach methods related to how to send back, headers, content, body etc.
+
+	cb(request, response);
+
+}
+
+http.createServer(function(request, response) {
+	console.log('cat')
+	response.send('hello');
+});

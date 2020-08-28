@@ -1,0 +1,9 @@
+<div ng-if="showLogin">
+	<div>
+		<div id='login_container'>
+	  		<input type="text" ng-model="user.name" placeholder="username" >
+	 	 	<button ng-click="login()" class="btn btn-primary">Enter</button>
+	 	</div> 
+ 	<div>
+</div>
+<p ng-if="!showLogin">Loading...</p>
